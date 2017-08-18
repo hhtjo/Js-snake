@@ -24,7 +24,7 @@ function render() {
 	snake.move();
 	foodController.foodList.forEach(function(currentFood){
 		if ((snake.pos[0][0] === currentFood[0]) && (snake.pos[0][1] === currentFood[1])) {
-			snake.eat();
+			snake.grow();
 			var del = foodController.foodList.indexOf(currentFood);
 			foodController.foodList.splice(del, 1);
 			score += 100;

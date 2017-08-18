@@ -5,9 +5,11 @@ class Snake {
 		this.last = [];
 	}
 
-	eat(){
+	grow(){
 		this.pos.push(this.last);
 	}
+
+	//Kalkulerer bevegelse i forhold til retingen
 	move(){
 		var x,y = 0;
 		switch(this.direction){
