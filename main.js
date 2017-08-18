@@ -20,10 +20,7 @@ setInterval(render, 100);
 function render() {
 	//clear last frame
 	canvas2d.clearRect(0,0,size[0],size[1]);
-	//snake.pos.forEach(function(currentPos){
-		//canvas2d.clearRect(currentPos[0]*tileSize, currentPos[1]*tileSize, tileSize, tileSize );
-	//});
-	//canvas2d.clearRect(0,0,5,15);
+
 	snake.move();
 	foodController.foodList.forEach(function(currentFood){
 		if ((snake.pos[0][0] === currentFood[0]) && (snake.pos[0][1] === currentFood[1])) {
